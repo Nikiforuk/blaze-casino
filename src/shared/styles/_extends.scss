@@ -1,0 +1,106 @@
+$font-inter: 'Inter', sans-serif;
+$font-manrope: 'Manrope', sans-serif;
+$font-satoshi: 'Satoshi', sans-serif;
+
+%text-base {
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 0;
+}
+
+%h1 {
+  @extend %text-base;
+  font-family: $font-satoshi;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 130%;
+}
+
+%h2 {
+  @extend %text-base;
+  font-family: $font-inter;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+}
+
+%h3-large {
+  @extend %text-base;
+  font-family: $font-inter;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 120%;
+}
+
+%h3-medium {
+  @extend %text-base;
+  font-family: $font-satoshi;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 130%;
+}
+
+%h4 {
+  @extend %text-base;
+  font-family: $font-satoshi;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 130%;
+}
+
+%main-text {
+  @extend %text-base;
+  font-family: $font-inter;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+%secondary-text {
+  @extend %text-base;
+  font-family: $font-inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+}
+
+%small-text {
+  @extend %text-base;
+  font-family: $font-inter;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+%manrope-medium {
+  @extend %text-base;
+  font-family: $font-manrope;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+%semi-bold-16 {
+  @extend %text-base;
+  font-family: $font-inter;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+%satoshi-black-32 {
+  @extend %text-base;
+  font-family: $font-satoshi;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 130%;
+}
+
+%satoshi-black-24 {
+  @extend %text-base;
+  font-family: $font-satoshi;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 130%;
+}

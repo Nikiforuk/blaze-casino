@@ -1,0 +1,101 @@
+@mixin flex (
+  $align: center,
+  $justify: center,
+  $direction: row,
+  $gap: null,
+  $wrap: nowrap,
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+
+  @if $gap != null {
+    gap: $gap;
+  }
+}
+
+@mixin size($w, $h: $w) {
+  width: $w;
+  height: $h;
+}
+
+@mixin abs-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin text-stroke($width, $color) {
+  -webkit-text-stroke: $width $color;
+  text-stroke: $width $color;
+}
+
+@mixin ring($color, $width: 2px, $radius: 8px) {
+  outline: none;
+  box-shadow: 0 0 0 $width $color;
+  border-radius: $radius;
+}
+
+@mixin motion-safe {
+  @media (prefers-reduced-motion: no-preference) {
+    @content;
+  }
+}
+
+@mixin hover-lift($y: -2px, $shadow: $shadow-2) {
+  transition: transform .2s ease, box-shadow .2s ease;
+  &:hover {
+    transform: translateY($y);
+    box-shadow: $shadow;
+  }
+}
+
+@mixin pressable {
+  transition: transform .15s ease;
+  &:active { transform: scale(.97) translateY(1px); }
+}
+
+@mixin gradient($from, $to, $deg: 180deg) {
+  background: linear-gradient($deg, $from, $to);
+}
+
+@mixin mq($key) {
+  @media (min-width: map-get($bp, $key)) {
+    @content;
+  }
+}
+
+@mixin fluid($property, $min, $max, $min-vw: 320, $max-vw: 1280) {
+  #{$property}: clamp(#{$min}, calc(#{$min} + (#{$max} - #{$min}) * ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw}))), #{$max});
+}
+
+@mixin gradient-text($from, $to) {
+  background: linear-gradient(180deg, $from, $to);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@mixin marquee-x($distance, $duration: 8s) {
+  animation: marquee-x $duration linear infinite;
+  @keyframes marquee-x {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-$distance); }
+    100% { transform: translateX(0); }
+  }
+}

@@ -1,0 +1,80 @@
+// ===== Fonts =====
+$font-inter: 'Inter', sans-serif;
+$font-manrope: 'Manrope', sans-serif;
+$font-satoshi: 'Satoshi', sans-serif;
+
+// ===== Base Colors =====
+$white: #FFFFFF;
+$dark-night: #24243F;
+$gray-30: #ADB5BD;
+$gray-100: #000000;
+$system-error: #C62121;
+$system-success: #82C91E;
+
+// ===== Extra Colors =====
+$dark-purple: #302C55;
+$medium-purple: #7F76CD;
+$deep-purple: #1D193A;
+$night-black: #0F0C29;
+
+// ===== Breakpoints =====
+$bp: (
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);
+
+// ===== Spacing =====
+$space: (
+  xs: 4px,
+  sm: 8px,
+  md: 12px,
+  lg: 16px,
+  xl: 24px,
+  xxl: 32px,
+  xxxl: 48px
+);
+
+// ===== Border Radius =====
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 18px;
+
+// ===== Gradients =====
+$gradient-pink-red: linear-gradient(0deg, #FF0047 0%, #FF417B 100%);
+$gradient-red-purple: linear-gradient(0deg, #BA0034 0%, #FF185F 100%);
+$gradient-light-pink: linear-gradient(0deg, #FF6892 0%, #FF9BB9 100%);
+$gradient-gold-orange: linear-gradient(180deg, #FFCD71 0%, #E59603 100%);
+$gradient-gold-dark: linear-gradient(180deg, #F1B23E 0%, #AA6E00 100%);
+$gradient-gold-light: linear-gradient(180deg, #FFDEA1 0%, #FCC869 100%);
+$gradient-dark-purple: linear-gradient(180deg, #0F0C29 0%, #312C5F 50%, #24243E 100%);
+$gradient-blue: linear-gradient(116.24deg, #3A88FF -6.88%, #004BBC 83.61%);
+
+// ===== Gradients + Shadows as Map =====
+$gradient-pink-red-shadow: (
+  background: linear-gradient(0deg, #FF0047 0%, #FF417B 100%),
+  shadow: 0px 0px 18px 0px #FF5A8C
+);
+
+$gradient-gold-orange-shadow: (
+  background: linear-gradient(180deg, #FFCD71 0%, #E59603 100%),
+  shadow: 0px 0px 18px 0px #FDC04E
+);
+
+$gradient-green-white: (
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF),
+  overlay: linear-gradient(116.24deg, #B9FF58 -6.88%, #69B400 83.61%),
+  shadow: 0px 0px 16px 0px #A7E84D
+);
+
+$gradient-white-shadow: 0px 0px 32px 0px #FFFFFF91;
+
+// ===== Borders =====
+$border-gradient-gold: linear-gradient(180deg, #FFCD71 0%, #E59603 100%);
+
+// ===== Shadows =====
+$shadow-pink: 0px 0px 18px 0px #FF5A8C;
+$shadow-gold: 0px 0px 18px 0px #FDC04E;
+$shadow-green: 0px 0px 16px 0px #A7E84D;
+$shadow-white: 0px 0px 32px 0px #FFFFFF91;
