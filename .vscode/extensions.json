@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "christian-kohler.path-intellisense",
+    "eamodio.gitlens",
+    "ms-vscode.vscode-typescript-tslint-plugin",
+    "stylelint.vscode-stylelint",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
+    "wix.vscode-import-cost",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
