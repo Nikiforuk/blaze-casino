@@ -1,28 +1,33 @@
 // ===== Fonts =====
-$font-inter: 'Inter', sans-serif;
-$font-manrope: 'Manrope', sans-serif;
-$font-satoshi: 'Satoshi', sans-serif;
+$font-inter: "Inter", sans-serif;
+$font-manrope: "Manrope", sans-serif;
+$font-satoshi: "Satoshi", sans-serif;
 
 // ===== Base Colors =====
-$white: #FFFFFF;
-$dark-night: #24243F;
-$gray-30: #ADB5BD;
+$white: #ffffff;
+$dark-night: #24243f;
+$gray-30: #adb5bd;
 $gray-100: #000000;
-$system-error: #C62121;
-$system-success: #82C91E;
+$gray-500: #848484;
+$blue-200: #aad2ff;
+$accent-blue: #51a2ff;
+$deep-blue: #1f73d1;
+$system-error: #c62121;
+$system-success: #82c91e;
 
 // ===== Extra Colors =====
-$dark-purple: #302C55;
-$medium-purple: #7F76CD;
-$deep-purple: #1D193A;
-$night-black: #0F0C29;
+$dark-purple: #302c55;
+$medium-purple: #7f76cd;
+$deep-purple: #1d193a;
+$deep-night: #100f22;
+$night-black: #0f0c29;
 
 // ===== Breakpoints =====
 $bp: (
   sm: 480px,
   md: 768px,
   lg: 1024px,
-  xl: 1280px
+  xl: 1280px,
 );
 
 // ===== Spacing =====
@@ -33,7 +38,7 @@ $space: (
   lg: 16px,
   xl: 24px,
   xxl: 32px,
-  xxxl: 48px
+  xxxl: 48px,
 );
 
 // ===== Border Radius =====
@@ -42,39 +47,44 @@ $radius-md: 12px;
 $radius-lg: 18px;
 
 // ===== Gradients =====
-$gradient-pink-red: linear-gradient(0deg, #FF0047 0%, #FF417B 100%);
-$gradient-red-purple: linear-gradient(0deg, #BA0034 0%, #FF185F 100%);
-$gradient-light-pink: linear-gradient(0deg, #FF6892 0%, #FF9BB9 100%);
-$gradient-gold-orange: linear-gradient(180deg, #FFCD71 0%, #E59603 100%);
-$gradient-gold-dark: linear-gradient(180deg, #F1B23E 0%, #AA6E00 100%);
-$gradient-gold-light: linear-gradient(180deg, #FFDEA1 0%, #FCC869 100%);
-$gradient-dark-purple: linear-gradient(180deg, #0F0C29 0%, #312C5F 50%, #24243E 100%);
-$gradient-blue: linear-gradient(116.24deg, #3A88FF -6.88%, #004BBC 83.61%);
+$gradient-pink-red: linear-gradient(0deg, #ff0047 0%, #ff417b 100%);
+$gradient-red-purple: linear-gradient(0deg, #ba0034 0%, #ff185f 100%);
+$gradient-light-pink: linear-gradient(0deg, #ff6892 0%, #ff9bb9 100%);
+$gradient-gold-orange: linear-gradient(180deg, #ffcd71 0%, #e59603 100%);
+$gradient-gold-dark: linear-gradient(180deg, #f1b23e 0%, #aa6e00 100%);
+$gradient-gold-light: linear-gradient(180deg, #ffdea1 0%, #fcc869 100%);
+$gradient-dark-purple: linear-gradient(
+  180deg,
+  #0f0c29 0%,
+  #312c5f 50%,
+  #24243e 100%
+);
+$gradient-blue: linear-gradient(116.24deg, #3a88ff -6.88%, #004bbc 83.61%);
 
 // ===== Gradients + Shadows as Map =====
 $gradient-pink-red-shadow: (
-  background: linear-gradient(0deg, #FF0047 0%, #FF417B 100%),
-  shadow: 0px 0px 18px 0px #FF5A8C
+  background: linear-gradient(0deg, #ff0047 0%, #ff417b 100%),
+  shadow: 0px 0px 18px 0px #ff5a8c,
 );
 
 $gradient-gold-orange-shadow: (
-  background: linear-gradient(180deg, #FFCD71 0%, #E59603 100%),
-  shadow: 0px 0px 18px 0px #FDC04E
+  background: linear-gradient(180deg, #ffcd71 0%, #e59603 100%),
+  shadow: 0px 0px 18px 0px #fdc04e,
 );
 
 $gradient-green-white: (
-  background: linear-gradient(0deg, #FFFFFF, #FFFFFF),
-  overlay: linear-gradient(116.24deg, #B9FF58 -6.88%, #69B400 83.61%),
-  shadow: 0px 0px 16px 0px #A7E84D
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+  overlay: linear-gradient(116.24deg, #b9ff58 -6.88%, #69b400 83.61%),
+  shadow: 0px 0px 16px 0px #a7e84d,
 );
 
-$gradient-white-shadow: 0px 0px 32px 0px #FFFFFF91;
+$gradient-white-shadow: 0px 0px 32px 0px #ffffff91;
 
 // ===== Borders =====
-$border-gradient-gold: linear-gradient(180deg, #FFCD71 0%, #E59603 100%);
+$border-gradient-gold: linear-gradient(180deg, #ffcd71 0%, #e59603 100%);
 
 // ===== Shadows =====
-$shadow-pink: 0px 0px 18px 0px #FF5A8C;
-$shadow-gold: 0px 0px 18px 0px #FDC04E;
-$shadow-green: 0px 0px 16px 0px #A7E84D;
-$shadow-white: 0px 0px 32px 0px #FFFFFF91;
+$shadow-pink: 0px 0px 18px 0px #ff5a8c;
+$shadow-gold: 0px 0px 18px 0px #fdc04e;
+$shadow-green: 0px 0px 16px 0px #a7e84d;
+$shadow-white: 0px 0px 32px 0px #ffffff91;

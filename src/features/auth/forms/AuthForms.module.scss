@@ -1,0 +1,30 @@
+@use "../../../shared/styles/variables" as *;
+@use "../../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: flex-start, $direction: column);
+  background: $deep-night;
+  max-width: 462px;
+  min-height: 614px;
+  width: 100%;
+  border-radius: 16px;
+  padding: 40px;
+
+  @media (max-width: 768px) {
+    max-width: 361px;
+    min-height: 534px;
+    padding: 32px;
+  }
+}
+
+.fields {
+  @include flex($align: center, $justify: space-between, $direction: column);
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.logIn {
+  width: 100%;
+  margin-bottom: 32px;
+}

@@ -1,16 +1,20 @@
-@use '../shared/styles/_variables.scss' as *;
+@use "../shared/styles/variables" as *;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: $font-inter;
   font-weight: 400;
   height: 100%;
   overflow-x: hidden;
   margin: 0;
   color: $white;
+  background: $gradient-dark-purple;
 }
 
 img,
@@ -19,8 +23,13 @@ picture {
   max-width: 100%;
 }
 
-
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
 }
 
@@ -37,7 +46,8 @@ button {
   cursor: pointer;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -53,7 +63,7 @@ select {
   outline: none;
 }
 
-input[type='number'] {
+input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
   &::-webkit-inner-spin-button,
@@ -62,4 +72,3 @@ input[type='number'] {
     margin: 0;
   }
 }
- 

@@ -1,0 +1,41 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: space-between, $direction: column);
+}
+
+.logo {
+  margin-bottom: 16px;
+}
+
+.welcome {
+  @include flex($align: center, $justify: center, $direction: column);
+  gap: 8px;
+  margin-bottom: 40px;
+
+  &_title {
+    @extend %h1;
+    color: $white;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+      line-height: 130%;
+    }
+  }
+
+  &_subtitle {
+    @extend %semi-bold-24;
+    color: $gray-30;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 130%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 4px;
+  }
+}

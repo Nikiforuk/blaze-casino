@@ -24,7 +24,8 @@ const satoshi = localFont({
 
 export const metadata: Metadata = {
   title: 'Blaze Casino',
-  description: 'Dive into Blaze Casino – exciting slot games, big wins, and endless fun every spin!',
+  description:
+    'Dive into Blaze Casino – exciting slot games, big wins, and endless fun every spin!',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

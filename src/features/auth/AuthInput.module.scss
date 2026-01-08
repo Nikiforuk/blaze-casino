@@ -1,0 +1,29 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: flex-start, $justify: center, $direction: column);
+  width: 100%;
+  gap: 8px;
+}
+
+.label {
+  @extend %manrope-medium;
+  text-align: left;
+  color: $gray-30;
+}
+
+.input {
+  @extend %manrope-medium;
+  background: $white;
+  text-align: left;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  color: $gray-100;
+
+  &::placeholder {
+    color: $gray-30;
+  }
+}
