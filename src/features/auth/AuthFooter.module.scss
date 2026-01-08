@@ -13,12 +13,12 @@
   transition: all 0.2s ease;
   color: $accent-blue;
 
-  &_pressed {
-    color: $deep-blue;
-  }
-
   &:hover {
     color: $blue-200;
+  }
+
+  &:active {
+    color: $deep-blue;
   }
 }
 

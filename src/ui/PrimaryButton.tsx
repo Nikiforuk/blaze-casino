@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 
 import styles from './PrimaryButton.module.scss';
@@ -8,6 +10,7 @@ interface PrimaryButtonProps {
   text?: string;
   iconWidth?: number;
   iconHeight?: number;
+  disabled?: boolean;
 }
 
 export default function PrimaryButton({
@@ -16,9 +19,14 @@ export default function PrimaryButton({
   text,
   iconWidth,
   iconHeight,
+  disabled,
 }: PrimaryButtonProps) {
   return (
-    <button type={type} className={styles.button}>
+    <button
+      type={type}
+      className={`${styles.button} ${disabled ? styles.disabled : ''}`}
+      disabled={disabled}
+    >
       {text}
       {icon && (
         <Image

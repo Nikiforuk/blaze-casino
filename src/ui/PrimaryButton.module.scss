@@ -17,10 +17,10 @@
   &:hover {
     box-shadow: $shadow-pink;
   }
-}
 
-.pressed {
-  background: $gradient-red-purple;
+  &:active {
+    background: $gradient-red-purple;
+  }
 }
 
 .disabled {

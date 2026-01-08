@@ -1,5 +1,9 @@
-import { redirect } from 'next/navigation';
+import styles from './page.module.scss';
 
 export default function Home() {
-  redirect('/signup');
+  return (
+    <div className={styles.container}>
+      <h1>Dashboard</h1>
+    </div>
+  );
 }
