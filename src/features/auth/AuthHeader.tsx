@@ -1,16 +1,15 @@
 'use client';
 
-import Image from 'next/image';
+import Logo from '@/ui/Logo';
 
 import ShimmerMotion from './animations/ShimmerMotion';
 import styles from './AuthHeader.module.scss';
-import logo from '../../assets/icons/logo.svg';
 
 export default function AuthHeader() {
   return (
     <div className={styles.container}>
       <ShimmerMotion className={styles.logo}>
-        <Image src={logo} width={40} height={40} alt="logo-image" />
+        <Logo />
       </ShimmerMotion>
       <div className={styles.welcome}>
         <h1 className={styles.welcome_title}>Blaze Casino</h1>
