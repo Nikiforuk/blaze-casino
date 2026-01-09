@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 
+import { AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { UseFormRegisterReturn } from 'react-hook-form';
 
+import ValidationMotion from './animations/ValidationMotion';
 import styles from './AuthInput.module.scss';
 import hideIcon from '../../assets/images/hide.png';
 import showIcon from '../../assets/images/show.png';
@@ -40,11 +42,11 @@ export default function AuthInput({
   const inputType = isPasswordType && showPassword ? type : 'text';
 
   const getBorderStyle = () => {
-    if (isFocused) {
-      return { border: '1.5px solid #887BFF' };
-    }
     if (isSuccess) {
       return { border: '1.5px solid #82C91E' };
+    }
+    if (isFocused) {
+      return { border: '1.5px solid #887BFF' };
     }
     return {};
   };
@@ -83,8 +85,18 @@ export default function AuthInput({
           </button>
         )}
       </div>
-      {error && <span className={styles.errorText}>{error}</span>}
-      {isSuccess && !error && <span className={styles.successText}>Successfully entered</span>}
+      <AnimatePresence mode="wait">
+        {error && (
+          <ValidationMotion key="error" className={styles.errorText}>
+            {error}
+          </ValidationMotion>
+        )}
+        {isSuccess && !error && (
+          <ValidationMotion key="success" className={styles.errorText}>
+            Successfully entered
+          </ValidationMotion>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

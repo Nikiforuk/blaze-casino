@@ -15,7 +15,6 @@ export default function AuthFooter({ link, text }: AuthFooterProps) {
       <Link href={link} className={styles.link}>
         {text}
       </Link>
-
       <div className={styles.line} />
       <p className={styles.subtext}>Your account data is stored locally in your browser</p>
     </div>

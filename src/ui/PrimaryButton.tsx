@@ -11,6 +11,7 @@ interface PrimaryButtonProps {
   iconWidth?: number;
   iconHeight?: number;
   disabled?: boolean;
+  onClick?: () => void;
 }
 
 export default function PrimaryButton({
@@ -20,12 +21,14 @@ export default function PrimaryButton({
   iconWidth,
   iconHeight,
   disabled,
+  onClick,
 }: PrimaryButtonProps) {
   return (
     <button
       type={type}
       className={`${styles.button} ${disabled ? styles.disabled : ''}`}
       disabled={disabled}
+      onClick={onClick}
     >
       {text}
       {icon && (
