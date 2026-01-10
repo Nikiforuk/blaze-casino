@@ -1,0 +1,29 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.button {
+  @include flex($align: center, $justify: center);
+  gap: 2px;
+  @extend %semi-bold-16;
+  width: 100%;
+  color: $white;
+  padding: 10px;
+  position: relative;
+  background: $gradient-gold-orange;
+  border-radius: 100px;
+  border: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    box-shadow: $shadow-gold;
+  }
+
+  &:active {
+    background: $gradient-gold-dark;
+  }
+}
+
+.disabled {
+  background: $gradient-gold-light;
+}

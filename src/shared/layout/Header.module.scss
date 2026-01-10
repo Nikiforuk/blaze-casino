@@ -1,0 +1,39 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: space-between);
+  background: $gradient-dark-purple;
+  padding: 34.5px 48px;
+  max-height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.leftSide {
+  @include flex($align: center, $justify: center);
+  gap: 8px;
+
+  &_title {
+    @extend %h4;
+  }
+}
+
+.rightSide {
+  @include flex($align: center, $justify: center);
+  gap: 54px;
+
+  &_box {
+    @include flex($align: center, $justify: center);
+    gap: 16px;
+  }
+
+  &_box:nth-child(2) {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
