@@ -8,6 +8,7 @@ import avatar from '../../assets/icons/avatar.svg';
 import loginOutline from '../../assets/icons/login-outline.svg';
 import logo from '../../assets/icons/logo-main.svg';
 import Balance from '../ui/Balance';
+import HamburgerButton from '../ui/HamburgerButton';
 import SecondaryButton from '../ui/SecondaryButton';
 import SettingsButton from '../ui/SettingsButton';
 
@@ -20,17 +21,31 @@ export default function Header() {
 
   return (
     <header className={styles.container}>
-      <div className={styles.leftSide}>
-        <h4 className={styles.leftSide_title}>Blaze</h4>
-        <Image src={logo} width={40} height={40} alt="logo-main-image" />
-        <h4 className={styles.leftSide_title}>Casino</h4>
+      <div className={styles.mobileLayout}>
+        <div className={styles.mobileLayout_hamburger}>
+          <HamburgerButton />
+        </div>
+        <div className={styles.mobileLayout_balance}>
+          <Balance />
+        </div>
+        <div className={styles.mobileLayout_avatar}>
+          <Image src={avatar} width={32} height={32} alt="avatar-image" />
+        </div>
       </div>
-      <div className={styles.rightSide}>
-        <div className={styles.rightSide_box}>
+
+      <div className={styles.brand}>
+        <h4 className={styles.brand_title}>Blaze</h4>
+        <Image src={logo} width={40} height={40} alt="logo-main-image" />
+        <h4 className={styles.brand_title}>Casino</h4>
+      </div>
+
+      <div className={styles.actions}>
+        <div className={styles.actions_userInfo}>
           <Balance />
           <Image src={avatar} width={32} height={32} alt="avatar-image" />
         </div>
-        <div className={styles.rightSide_box}>
+
+        <div className={styles.actions_controls}>
           <SettingsButton />
           <SecondaryButton
             icon={loginOutline}

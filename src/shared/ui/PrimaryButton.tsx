@@ -12,6 +12,7 @@ interface PrimaryButtonProps {
   iconHeight?: number;
   disabled?: boolean;
   onClick?: () => void;
+  iconLayout?: 'absolute' | 'inline';
 }
 
 export default function PrimaryButton({
@@ -22,22 +23,23 @@ export default function PrimaryButton({
   iconHeight,
   disabled,
   onClick,
+  iconLayout = 'absolute',
 }: PrimaryButtonProps) {
+  const buttonClass = `${styles.button} ${disabled ? styles.disabled : ''} ${iconLayout === 'inline' ? styles.inline : ''}`;
+  const iconClass =
+    iconLayout === 'absolute' ? `${styles.icon} ${styles.icon_absolute}` : styles.icon;
+
   return (
-    <button
-      type={type}
-      className={`${styles.button} ${disabled ? styles.disabled : ''}`}
-      disabled={disabled}
-      onClick={onClick}
-    >
+    <button type={type} className={buttonClass} disabled={disabled} onClick={onClick}>
       {text}
       {icon && (
         <Image
-          className={styles.icon}
+          className={iconClass}
           src={icon}
           width={iconWidth}
           height={iconHeight}
           alt="primary-button-image"
+          priority
         />
       )}
     </button>

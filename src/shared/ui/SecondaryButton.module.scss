@@ -27,3 +27,19 @@
 .disabled {
   background: $gradient-gold-light;
 }
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.icon_absolute {
+  position: absolute;
+  right: 10px;
+}
+
+.absolute {
+  position: relative;
+  display: block;
+  text-align: center;
+}

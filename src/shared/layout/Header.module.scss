@@ -13,27 +13,62 @@
   width: 100%;
 }
 
-.leftSide {
+.mobileLayout {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &_hamburger {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &_balance {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &_avatar {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.brand {
   @include flex($align: center, $justify: center);
   gap: 8px;
 
   &_title {
     @extend %h4;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
-.rightSide {
+.actions {
   @include flex($align: center, $justify: center);
   gap: 54px;
 
-  &_box {
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  &_userInfo {
     @include flex($align: center, $justify: center);
     gap: 16px;
   }
 
-  &_box:nth-child(2) {
-    @media (max-width: 768px) {
-      display: none;
-    }
+  &_controls {
+    @include flex($align: center, $justify: center);
+    gap: 16px;
   }
 }

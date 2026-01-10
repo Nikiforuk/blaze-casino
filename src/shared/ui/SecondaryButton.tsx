@@ -14,6 +14,7 @@ interface SecondaryButtonProps {
   onClick?: () => void;
   height: string;
   width: string;
+  iconLayout?: 'absolute' | 'inline';
 }
 
 export default function SecondaryButton({
@@ -26,11 +27,16 @@ export default function SecondaryButton({
   onClick,
   height,
   width,
+  iconLayout = 'inline',
 }: SecondaryButtonProps) {
+  const buttonClass = `${styles.button} ${disabled ? styles.disabled : ''} ${iconLayout === 'absolute' ? styles.absolute : ''}`;
+  const iconClass =
+    iconLayout === 'absolute' ? `${styles.icon} ${styles.icon_absolute}` : styles.icon;
+
   return (
     <button
       type={type}
-      className={`${styles.button} ${disabled ? styles.disabled : ''}`}
+      className={buttonClass}
       disabled={disabled}
       onClick={onClick}
       style={{ height, width }}
@@ -38,11 +44,12 @@ export default function SecondaryButton({
       {text}
       {icon && (
         <Image
-          className={styles.icon}
+          className={iconClass}
           src={icon}
           width={iconWidth}
           height={iconHeight}
           alt="primary-button-image"
+          priority
         />
       )}
     </button>
