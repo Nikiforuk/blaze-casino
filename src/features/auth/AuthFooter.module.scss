@@ -1,0 +1,34 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: center, $direction: column);
+  width: 100%;
+  gap: 16px;
+}
+
+.link {
+  @extend %manrope-medium;
+  transition: all 0.2s ease;
+  color: $accent-blue;
+
+  &:hover {
+    color: $blue-200;
+  }
+
+  &:active {
+    color: $deep-blue;
+  }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: $gray-500;
+}
+
+.subtext {
+  @extend %small-text;
+  color: $gray-30;
+}
