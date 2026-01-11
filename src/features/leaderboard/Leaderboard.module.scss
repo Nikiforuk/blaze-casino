@@ -3,13 +3,15 @@
 @use "../../shared/styles/mixins" as *;
 
 .container {
-  @include flex($align: center, $justify: center, $direction: column);
+  @include flex($align: center, $justify: flex-start, $direction: column);
   max-width: 292px;
   border-radius: 16px;
   background: $deep-indigo;
   padding: 16px;
   position: relative;
   z-index: 1;
+  height: fit-content;
+  align-self: flex-start;
 }
 
 .goldCup {
