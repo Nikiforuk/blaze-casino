@@ -1,0 +1,19 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: center, $direction: column);
+  max-width: 292px;
+  border-radius: 16px;
+  background: $deep-indigo;
+  padding: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.goldCup {
+  position: absolute;
+  top: -34;
+  left: -40;
+}
