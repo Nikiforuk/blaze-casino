@@ -1,0 +1,18 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: center, $direction: column);
+  gap: 2px;
+  margin-bottom: 24px;
+}
+
+.title {
+  @extend %h4;
+}
+
+.subtitle {
+  @extend %semi-regular-16;
+  color: $gray-30;
+}

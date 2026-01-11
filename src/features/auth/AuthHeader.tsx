@@ -1,6 +1,6 @@
 'use client';
 
-import Logo from '@/ui/Logo';
+import Logo from '@/shared/ui/Logo';
 
 import ShimmerMotion from './animations/ShimmerMotion';
 import styles from './AuthHeader.module.scss';

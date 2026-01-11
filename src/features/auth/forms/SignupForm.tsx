@@ -3,7 +3,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 
-import PrimaryButton from '@/ui/PrimaryButton';
+import PrimaryButton from '@/shared/ui/PrimaryButton';
 
 import FormMotion from '../animations/FormMotion';
 import AuthFooter from '../AuthFooter';

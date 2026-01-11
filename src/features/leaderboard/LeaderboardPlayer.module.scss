@@ -1,0 +1,74 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: flex-start);
+  background: $dark-night;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: $shadow-blue-soft;
+  width: 260px;
+  max-height: 94px;
+  position: relative;
+}
+
+.currentUser {
+  background:
+    linear-gradient($dark-night, $dark-night) padding-box,
+    $gradient-gold-orange border-box;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+
+.place {
+  margin-right: 16px;
+}
+
+.placeNum {
+  @extend %semi-bold-24;
+  margin-right: 16px;
+}
+
+.content {
+  @include flex($align: flex-start, $justify: center, $direction: column);
+  flex: 1;
+  gap: 4px;
+}
+
+.balance {
+  @include flex($align: center, $justify: center);
+  gap: 2px;
+
+  &_sum {
+    @extend %semi-bold-16;
+  }
+}
+
+.usernameWrapper {
+  @include flex($align: flex-start, $justify: center, $direction: column);
+}
+
+.youLabel {
+  @extend %semi-regular-12;
+  color: $gray-30;
+}
+
+.infoContent {
+  @include flex($align: center, $justify: space-between);
+  width: 100%;
+
+  &_title {
+    @extend %semi-bold-16;
+  }
+
+  &_text {
+    @extend %semi-regular-12;
+    color: $gray-30;
+  }
+
+  &_percentOfWin {
+    @extend %semi-regular-12;
+    color: $system-success;
+  }
+}
