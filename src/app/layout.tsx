@@ -3,6 +3,7 @@ import { Inter, Manrope } from 'next/font/google';
 import localFont from 'next/font/local';
 
 import './globals.scss';
+import { ReactQueryProvider } from '@/providers/ReactQueryProvider';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -32,7 +33,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${inter.variable} ${manrope.variable} ${satoshi.variable}`}>
-        <main className="main">{children}</main>
+        <ReactQueryProvider>
+          <main className="main">{children}</main>
+        </ReactQueryProvider>
       </body>
     </html>
   );

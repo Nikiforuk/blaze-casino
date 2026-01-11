@@ -1,3 +1,48 @@
-@use "../shared/styles/variables";
-@use "../shared/styles/extends";
-@use "../shared/styles/mixins";
+@use "../shared/styles/variables" as *;
+@use "../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: center, $direction: column);
+  min-height: 100vh;
+  padding: 40px;
+  gap: 24px;
+}
+
+.header {
+  @include flex($align: center, $justify: space-between);
+  width: 100%;
+  max-width: 800px;
+}
+
+.welcome {
+  color: $white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.content {
+  @include flex($align: center, $justify: center, $direction: column);
+  background: $deep-night;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+  gap: 16px;
+}
+
+.title {
+  color: $white;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.userInfo {
+  color: $gray-30;
+  font-size: 16px;
+}
+
+.logoutButton {
+  margin-top: 24px;
+  max-width: 200px;
+}
