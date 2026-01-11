@@ -9,6 +9,16 @@
   border-radius: 8px;
   box-shadow: $shadow-blue-soft;
   width: 260px;
+  max-height: 94px;
+  position: relative;
+}
+
+.currentUser {
+  background:
+    linear-gradient($dark-night, $dark-night) padding-box,
+    $gradient-gold-orange border-box;
+  border: 2px solid transparent;
+  border-radius: 8px;
 }
 
 .place {
@@ -33,6 +43,15 @@
   &_sum {
     @extend %semi-bold-16;
   }
+}
+
+.usernameWrapper {
+  @include flex($align: flex-start, $justify: center, $direction: column);
+}
+
+.youLabel {
+  @extend %semi-regular-12;
+  color: $gray-30;
 }
 
 .infoContent {

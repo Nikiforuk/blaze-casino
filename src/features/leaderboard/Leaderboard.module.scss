@@ -17,3 +17,14 @@
   top: -34;
   left: -40;
 }
+
+.error {
+  @extend %semi-regular-12;
+  color: $system-error;
+  padding: 16px;
+  text-align: center;
+}
+
+.error {
+  color: $system-error;
+}

@@ -1,17 +1,22 @@
 import { LeaderboardPlayer } from './LeaderboardPlayer';
 import styles from './LeaderboardPlayers.module.scss';
+import { LeaderboardPlayer as LeaderboardPlayerType } from './types';
 
-export default function LeaderboardPlayers() {
+interface LeaderboardPlayersProps {
+  players: LeaderboardPlayerType[];
+  currentUser: LeaderboardPlayerType | null;
+}
+
+export default function LeaderboardPlayers({ players, currentUser }: LeaderboardPlayersProps) {
   return (
     <div className={styles.container}>
-      <LeaderboardPlayer />
-      <LeaderboardPlayer />
-      <LeaderboardPlayer />
-      <LeaderboardPlayer />
-      <LeaderboardPlayer />
-      <LeaderboardPlayer />
-      <LeaderboardPlayer />
-      <LeaderboardPlayer />
+      {players.map((player) => (
+        <LeaderboardPlayer
+          key={player.rank}
+          player={player}
+          isCurrentUser={currentUser?.username === player.username}
+        />
+      ))}
     </div>
   );
 }
