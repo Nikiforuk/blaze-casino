@@ -1,0 +1,15 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: center);
+  padding-top: 35px;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 24px;
+}

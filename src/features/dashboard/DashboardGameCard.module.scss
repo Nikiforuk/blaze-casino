@@ -1,0 +1,62 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  position: relative;
+  width: 296px;
+  min-height: 363px;
+  border-radius: 24px;
+  box-shadow: $shadow-white-strong;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 24px;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      180deg,
+      rgba(138, 56, 245, 0.2) 0%,
+      rgba(18, 0, 42, 0.2) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.statusContent {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 100px;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  @include flex($align: center, $justify: center, $direction: column);
+  padding: 16px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(3px);
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 16px;
+}
+
+.title {
+  @extend %h1;
+}
+
+.description {
+  @extend %semi-medium-14;
+}
+
+.actionZone {
+  position: relative;
+  z-index: 2;
+  max-width: 168px;
+  margin: 0 auto;
+}

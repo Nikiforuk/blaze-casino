@@ -97,6 +97,23 @@ $font-satoshi: "Satoshi", sans-serif;
   line-height: 150%;
 }
 
+%semi-medium-14 {
+  @extend %text-base;
+  font-family: $font-inter;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+}
+
+%semi-regular-12 {
+  @extend %text-base;
+  font-family: $font-inter;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0;
+}
+
 %semi-bold-24 {
   @extend %text-base;
   font-family: $font-inter;

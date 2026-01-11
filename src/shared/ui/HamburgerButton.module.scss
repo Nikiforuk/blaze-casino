@@ -1,0 +1,12 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.button {
+  @include flex($align: center, $justify: center);
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background: none;
+}

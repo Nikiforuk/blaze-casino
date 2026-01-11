@@ -20,6 +20,7 @@ $dark-purple: #302c55;
 $medium-purple: #7f76cd;
 $deep-purple: #1d193a;
 $deep-night: #100f22;
+$deep-indigo: #423e69;
 $night-black: #0f0c29;
 
 // ===== Breakpoints =====
@@ -59,26 +60,12 @@ $gradient-dark-purple: linear-gradient(
   #312c5f 50%,
   #24243e 100%
 );
+$gradient-green-white: linear-gradient(
+  116.24deg,
+  #b9ff58 -6.88%,
+  #69b400 83.61%
+);
 $gradient-blue: linear-gradient(116.24deg, #3a88ff -6.88%, #004bbc 83.61%);
-
-// ===== Gradients + Shadows as Map =====
-$gradient-pink-red-shadow: (
-  background: linear-gradient(0deg, #ff0047 0%, #ff417b 100%),
-  shadow: 0px 0px 18px 0px #ff5a8c,
-);
-
-$gradient-gold-orange-shadow: (
-  background: linear-gradient(180deg, #ffcd71 0%, #e59603 100%),
-  shadow: 0px 0px 18px 0px #fdc04e,
-);
-
-$gradient-green-white: (
-  background: linear-gradient(0deg, #ffffff, #ffffff),
-  overlay: linear-gradient(116.24deg, #b9ff58 -6.88%, #69b400 83.61%),
-  shadow: 0px 0px 16px 0px #a7e84d,
-);
-
-$gradient-white-shadow: 0px 0px 32px 0px #ffffff91;
 
 // ===== Borders =====
 $border-gradient-gold: linear-gradient(180deg, #ffcd71 0%, #e59603 100%);
@@ -88,3 +75,5 @@ $shadow-pink: 0px 0px 18px 0px #ff5a8c;
 $shadow-gold: 0px 0px 18px 0px #fdc04e;
 $shadow-green: 0px 0px 16px 0px #a7e84d;
 $shadow-white: 0px 0px 32px 0px #ffffff91;
+$shadow-white-strong: 0px 0px 100px 1px #ffffff4d;
+$shadow-blue-soft: 0px 2px 10px 0px #bfd8ff33;

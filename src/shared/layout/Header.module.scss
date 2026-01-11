@@ -1,0 +1,75 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: space-between);
+  background: $gradient-dark-purple;
+  padding: 34.5px 48px;
+  max-height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.mobileLayout {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  &_hamburger {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &_balance {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &_avatar {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.brand {
+  @include flex($align: center, $justify: center);
+  gap: 8px;
+
+  &_title {
+    @extend %h4;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.actions {
+  @include flex($align: center, $justify: center);
+  gap: 54px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  &_userInfo {
+    @include flex($align: center, $justify: center);
+    gap: 16px;
+  }
+
+  &_controls {
+    @include flex($align: center, $justify: center);
+    gap: 16px;
+  }
+}

@@ -1,0 +1,15 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  display: inline-block;
+  background: $gradient-green-white;
+  box-shadow: $shadow-green;
+  border-radius: 1000px;
+  padding: 4px 16px;
+}
+
+.text {
+  @extend %main-text;
+}

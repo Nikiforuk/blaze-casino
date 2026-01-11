@@ -1,0 +1,11 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: center);
+  gap: 8px;
+  border: 1px solid $gray-30;
+  border-radius: 1000px;
+  padding: 16px 24px;
+}

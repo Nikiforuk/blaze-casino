@@ -1,0 +1,9 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+}
