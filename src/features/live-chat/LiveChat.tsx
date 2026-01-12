@@ -42,6 +42,20 @@ export default function LiveChat({ isModal = false, isOpen = false, onClose }: L
               time="15.35"
               message="Hello! Is the live roulette available right now? It says 'connecting'"
             />
+            <LiveChatMessage
+              avatar={avatar}
+              level="1"
+              username="Mia Shtorm"
+              time="15.35"
+              message="Hello! Is the live roulette available right now? It says 'connecting'"
+            />
+            <LiveChatMessage
+              avatar={avatar}
+              level="1"
+              username="Mia Shtorm"
+              time="15.35"
+              message="Hello! Is the live roulette available right now? It says 'connecting'"
+            />
           </div>
           <div className={styles.formElements}>
             <LiveChatInput />
@@ -56,6 +70,13 @@ export default function LiveChat({ isModal = false, isOpen = false, onClose }: L
     <div className={styles.container}>
       <LiveChatHeader />
       <div className={styles.messages}>
+        <LiveChatMessage
+          avatar={avatar}
+          level="1"
+          username="Mia Shtorm"
+          time="15.35"
+          message="Hello! Is the live roulette available right now? It says 'connecting'"
+        />
         <LiveChatMessage
           avatar={avatar}
           level="1"

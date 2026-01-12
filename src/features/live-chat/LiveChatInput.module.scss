@@ -16,4 +16,9 @@
     text-align: left;
     color: $white;
   }
+
+  @media (max-width: 1280px) {
+    max-width: 301px;
+    backdrop-filter: blur(4px);
+  }
 }
