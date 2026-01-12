@@ -13,6 +13,7 @@ interface PrimaryButtonProps {
   disabled?: boolean;
   onClick?: () => void;
   iconLayout?: 'absolute' | 'inline';
+  smallSize?: boolean;
 }
 
 export default function PrimaryButton({
@@ -23,9 +24,10 @@ export default function PrimaryButton({
   iconHeight,
   disabled,
   onClick,
+  smallSize,
   iconLayout = 'absolute',
 }: PrimaryButtonProps) {
-  const buttonClass = `${styles.button} ${disabled ? styles.disabled : ''} ${iconLayout === 'inline' ? styles.inline : ''}`;
+  const buttonClass = `${styles.button} ${disabled ? styles.disabled : ''} ${iconLayout === 'inline' ? styles.inline : ''} ${smallSize && styles.smallSize}`;
   const iconClass =
     iconLayout === 'absolute' ? `${styles.icon} ${styles.icon_absolute}` : styles.icon;
 

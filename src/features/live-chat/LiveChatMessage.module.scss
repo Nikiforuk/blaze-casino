@@ -11,6 +11,10 @@
   padding: 24px 16px;
   position: relative;
   gap: 8px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .imageBox {
@@ -45,6 +49,10 @@
       @extend %semi-medium-14;
       color: $gray-30;
     }
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
   }
 }
 

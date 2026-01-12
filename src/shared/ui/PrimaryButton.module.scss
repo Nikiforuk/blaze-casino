@@ -43,3 +43,9 @@
   align-items: center;
   gap: 8px;
 }
+
+.smallSize {
+  @media (max-width: 768px) {
+    height: 40px;
+  }
+}

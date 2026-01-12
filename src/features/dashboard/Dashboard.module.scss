@@ -3,8 +3,32 @@
 @use "../../shared/styles/mixins" as *;
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: start;
+  @include flex($align: flex-start, $justify: space-between);
   padding: 0px 16px 16px 24px;
+
+  @media (max-width: 1440px) {
+    padding: 0;
+    padding-bottom: 24px;
+  }
+
+  @media (max-width: 1280px) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.liveChatBtn {
+  display: none;
+
+  @media (max-width: 1280px) {
+    display: block;
+  }
+}
+
+.liveChat {
+  @media (max-width: 1280px) {
+    display: none;
+  }
 }

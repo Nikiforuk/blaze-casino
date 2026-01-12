@@ -11,6 +11,11 @@
   width: 260px;
   max-height: 94px;
   position: relative;
+
+  @media (max-width: 1280px) {
+    @include flex($align: center, $justify: center);
+    width: 100%;
+  }
 }
 
 .currentUser {

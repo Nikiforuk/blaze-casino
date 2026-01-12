@@ -12,12 +12,29 @@
   z-index: 1;
   height: fit-content;
   align-self: flex-start;
+
+  @media (max-width: 1280px) {
+    max-width: 616px;
+    width: 100%;
+    align-self: center;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 361px;
+    width: 100%;
+    align-self: center;
+  }
 }
 
 .goldCup {
   position: absolute;
   top: -34;
   left: -40;
+
+  @media (max-width: 1440px) {
+    top: -34px;
+    left: -25px;
+  }
 }
 
 .error {

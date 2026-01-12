@@ -41,7 +41,7 @@ export default function DashboardGameCard({
         <p className={styles.description}>{description}</p>
       </div>
       <div className={styles.actionZone}>
-        <PrimaryButton text="Free play" type="button" onClick={handleClick} />
+        <PrimaryButton smallSize={true} text="Free play" type="button" onClick={handleClick} />
       </div>
     </CardMotion>
   );

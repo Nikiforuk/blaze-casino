@@ -5,13 +5,17 @@
 .container {
   @include flex($align: center, $justify: space-between);
   background: $gradient-dark-purple;
-  padding: 34.5px 48px;
+  padding: 16px 16px 24px 16px;
   max-height: 100px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
+
+  @media (max-width: 768px) {
+    background: none;
+  }
 }
 
 .mobileLayout {

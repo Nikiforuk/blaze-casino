@@ -1,0 +1,72 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1000;
+  visibility: hidden;
+  transition:
+    background 0.3s ease,
+    visibility 0.3s ease;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.overlayOpen {
+  background: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+}
+
+.container {
+  width: 55%;
+  height: 100%;
+  padding: 21.5px 16px 29.5px 16px;
+  background: $night-black;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.containerOpen {
+  transform: translateX(0);
+}
+
+.inner {
+  @include flex($direction: column);
+  height: 100%;
+}
+
+.topContent {
+  @include flex($align: center, $justify: center);
+  gap: 8px;
+  margin-bottom: 70px;
+}
+
+.menuItems {
+  @include flex($align: center, $justify: space-between, $direction: column);
+  flex: 1;
+  gap: 8px;
+  width: 100%;
+}
+
+.menuTop {
+  @include flex($align: center, $justify: flex-start, $direction: column);
+  gap: 8px;
+  width: 100%;
+}
+
+.menuBottom {
+  @include flex($align: center, $justify: center);
+  width: 100%;
+}
+
+.logo {
+  @extend %h4;
+}

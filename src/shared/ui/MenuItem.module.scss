@@ -1,0 +1,17 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: flex-start);
+  padding: 11px 16px;
+  width: 100%;
+  background: rgba(66, 62, 105, 0.5);
+  border-radius: 8px;
+  gap: 11px;
+  cursor: pointer;
+}
+
+.text {
+  @extend %semi-regular-16;
+}
