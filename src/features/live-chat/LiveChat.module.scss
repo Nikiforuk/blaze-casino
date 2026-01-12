@@ -5,15 +5,18 @@
 .container {
   @include flex($align: center, $justify: flex-start, $direction: column);
   width: 100%;
+  height: 100%;
 }
 
 .messages {
   @include flex($align: center, $justify: flex-start, $direction: column);
+  flex: 1 1 auto;
   gap: 16px;
-  margin-bottom: 16px;
   padding: 32px;
-  max-height: 650px;
   overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: 670px;
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -35,13 +38,14 @@
     margin-top: 32px;
     padding: 32px 16px 32px 32px;
     gap: 16px;
-    margin-bottom: 32px;
   }
 }
 
 .formElements {
   @include flex($align: center, $justify: space-between);
+  flex: 0 0 auto;
   gap: 16px;
+  padding: 16px 0;
 
   @media (max-width: 1280px) {
     justify-content: center;
@@ -65,11 +69,19 @@
     visibility 0.3s ease;
   display: flex;
   align-items: flex-end;
+
+  @media (min-width: 1280px) {
+    display: none;
+  }
 }
 
 .overlayOpen {
   background: rgba(0, 0, 0, 0.5);
   visibility: visible;
+
+  @media (min-width: 1280px) {
+    display: none;
+  }
 }
 
 .modal {
@@ -82,6 +94,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     width: 6px;
@@ -100,6 +113,19 @@
 
   @media (max-width: 1280px) {
     background: $dark-purple;
+  }
+
+  .messages {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    width: 100%;
+  }
+
+  .formElements {
+    flex: 0 0 auto;
+    position: relative;
+    bottom: auto;
+    padding: 16px 0;
   }
 }
 
