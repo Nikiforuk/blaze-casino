@@ -1,0 +1,16 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: center);
+  min-height: 26px;
+  min-width: 37px;
+  background: $gradient-blue;
+  border-radius: 100px;
+  padding: 4px;
+}
+
+.level {
+  @extend %semi-medium-14;
+}

@@ -1,0 +1,19 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.input {
+  @extend %semi-medium-14;
+  border-radius: 1000px;
+  background: rgba(124, 124, 232, 0.33);
+  padding: 10px 16px;
+  max-width: 190px;
+  width: 100%;
+  color: $white;
+
+  &::placeholder {
+    @extend %semi-medium-14;
+    text-align: left;
+    color: $white;
+  }
+}

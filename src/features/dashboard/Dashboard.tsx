@@ -5,6 +5,7 @@ import { dashboardContainerVariants } from './animations';
 import styles from './Dashboard.module.scss';
 import DashboardGameList from './DashboardGameList';
 import Leaderboard from '../leaderboard/Leaderboard';
+import LiveChat from '../live-chat/LiveChat';
 
 export default function Dashboard() {
   return (
@@ -16,6 +17,7 @@ export default function Dashboard() {
     >
       <Leaderboard />
       <DashboardGameList />
+      <LiveChat />
     </motion.div>
   );
 }

@@ -1,0 +1,65 @@
+@use "../../shared/styles/variables" as *;
+@use "../../shared/styles/extends" as *;
+@use "../../shared/styles/mixins" as *;
+
+.container {
+  @include flex($align: center, $justify: center, $direction: column);
+  width: 250px;
+  background: $dark-night;
+  box-shadow: $shadow-blue-soft;
+  border-radius: 16px;
+  padding: 24px 16px;
+  position: relative;
+  gap: 8px;
+}
+
+.imageBox {
+  @include flex($align: center, $justify: center);
+  background: $gradient-gold-orange;
+  box-shadow: $shadow-gold-soft;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  position: absolute;
+  top: -16px;
+  left: -16px;
+
+  &_avatar {
+    border-radius: 50%;
+  }
+}
+
+.topContent {
+  @include flex($align: center, $justify: space-between);
+  width: 100%;
+
+  &_userInfo {
+    @include flex($align: center, $justify: center);
+    gap: 8px;
+
+    &_title {
+      @extend %semi-bold-16;
+    }
+
+    &_time {
+      @extend %semi-medium-14;
+      color: $gray-30;
+    }
+  }
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: $gray-30;
+}
+
+.messageBox {
+  width: 100%;
+
+  &_message {
+    @extend %semi-regular-16;
+    text-align: left;
+    color: $gray-30;
+  }
+}
