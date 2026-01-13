@@ -20,7 +20,6 @@ export default function LiveChatMessage({
   type = 'chat',
   level = '1',
 }: LiveChatMessageProps) {
-  // Handle join/leave system messages
   if (type === 'join' || type === 'leave') {
     return (
       <div className={styles.systemMessage}>

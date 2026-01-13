@@ -13,7 +13,6 @@ export function useLiveChatSocket() {
   useEffect(() => {
     if (!accessToken) return;
 
-    // Set current user ID for filtering own join/leave messages
     if (userId) {
       setCurrentUserId(userId);
     }

@@ -62,7 +62,6 @@ export const useLiveChatStore = create<LiveChatStore>((set) => ({
       const newMessages = [...state.messages, message];
       const newIds = new Set([...state.messageIds, message._id]);
 
-      // Keep only last 100 messages
       if (newMessages.length > 100) {
         const removed = newMessages.shift();
         if (removed) newIds.delete(removed._id);
