@@ -1,13 +1,20 @@
 import styles from './LiveChatInput.module.scss';
 
-export default function LiveChatInput() {
+interface LiveChatInputProps {
+  value: string;
+  onChange: (value: string) => void;
+}
+
+export default function LiveChatInput({ value, onChange }: LiveChatInputProps) {
   return (
     <input
       className={styles.input}
       name="message"
       type="text"
       placeholder="Write a message..."
-      autoComplete="text"
+      autoComplete="off"
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
     />
   );
 }

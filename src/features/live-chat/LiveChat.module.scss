@@ -129,3 +129,21 @@
 .modalOpen {
   transform: translateY(0);
 }
+
+.status {
+  @include flex($align: center, $justify: center);
+  width: 100%;
+  height: 100%;
+  color: $gray-30;
+  font-size: 14px;
+}
+
+.error {
+  @include flex($align: center, $justify: center);
+  width: 100%;
+  height: 100%;
+  color: #ff6b6b;
+  font-size: 14px;
+  text-align: center;
+  padding: 16px;
+}

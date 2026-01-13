@@ -92,7 +92,10 @@ export default function AuthInput({
           </ValidationMotion>
         )}
         {isSuccess && !error && (
-          <ValidationMotion key="success" className={styles.errorText}>
+          <ValidationMotion
+            key="success"
+            className={isSuccess ? styles.successText : error ? styles.errorText : ''}
+          >
             Successfully entered
           </ValidationMotion>
         )}
