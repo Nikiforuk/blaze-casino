@@ -12,7 +12,6 @@ const DEFAULT_ROOM = 'general';
 class SocketService {
   private static instance: SocketService;
   private socket: Socket | null = null;
-  private pendingRoom: string | null = DEFAULT_ROOM;
 
   private constructor() {}
 
@@ -127,13 +126,13 @@ class SocketService {
       useLiveChatStore.getState().setConnecting(false);
       useLiveChatStore.getState().setConnectionError(null);
 
-      // Join pending room or re-join active room on reconnect
+      // Join active room on reconnect, or default room on first connect
       const activeRoom = useLiveChatStore.getState().activeRoom;
       if (activeRoom) {
         this.joinRoom(activeRoom);
-      } else if (this.pendingRoom) {
-        this.joinRoom(this.pendingRoom);
-        this.pendingRoom = null;
+      } else {
+        // Always join default room if no active room
+        this.joinRoom(DEFAULT_ROOM);
       }
     });
 
