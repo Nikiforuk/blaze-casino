@@ -6,6 +6,7 @@
   @include flex($align: center, $justify: flex-start, $direction: column);
   max-width: 292px;
   max-height: 650px;
+  width: 100%;
   border-radius: 16px;
   background: $deep-indigo;
   padding: 16px;
